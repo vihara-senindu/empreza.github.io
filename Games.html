@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games - Empreza 2025</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f7f7f7;
+        color: #333;
+      }
+
+      header {
+        background: #cf061e;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      .games-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .game-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .game-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .game-card h3 {
+        margin-top: 0;
+        color: #cf061e;
+      }
+
+      .game-card p {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html"> <img src="logo.png" alt="Event Logo" /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="./index.html">About</a></li>
+          <li><a href="./Games.html">Games</a></li>
+          <li><a href="./scores.html">Scores</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+
+        <div class="countdown" id="countdown">Loading...</div>
+      </nav>
+    </header>
+
+    <div class="games-container">
+      <div class="game-card">
+        <h3>Treasure Hunt</h3>
+        <p>Find hidden treasures across the venue using clues and teamwork.</p>
+      </div>
+      <div class="game-card">
+        <h3>Obstacle course challenge</h3>
+        <p>Test your agility and speed by overcoming challenging obstacles.</p>
+      </div>
+      <div class="game-card">
+        <h3>Path of challenge</h3>
+        <p>
+          Muddy mystery course: Four-person team tackles unknown obstacles,
+          showcasing strength, endurance, and spirit.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Rope mesh game</h3>
+        <p>
+          Verbal maze guidance: Five blindfolded, one voice. Team coordinates
+          path to solve puzzle.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Elimination Web</h3>
+        <p>
+          Get ready for thrilling action and fun as we kick off the
+          Elimination Web.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Thread Ball Pass</h3>
+        <p>The ball is passed using threads without dropping it.</p>
+      </div>
+      <div class="game-card">
+        <h3>Flow it forward</h3>
+        <p>
+          A thrilling team challenge where teamwork and precision turn water
+          into victory.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Flying pen</h3>
+        <p>
+          A test of teamwork and precision where steady hands and smart
+          coordination lead the way to victory
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Cloth hope</h3>
+        <p>Dribble, pass, and score goals in friendly matches.</p>
+      </div>
+      <div class="game-card">
+        <h3>Ball brakeout</h3>
+        <p>Test your strategy skills in one-on-one chess games.</p>
+      </div>
+      <div class="game-card">
+        <h3>The caterpillar</h3>
+        <p>Fast reflexes and precision will take you to victory.</p>
+      </div>
+      <div class="game-card">
+        <h3>Clothes peg relay</h3>
+        <p>Smash and rally to win in this exciting badminton game.</p>
+      </div>
+      <div class="game-card">
+        <h3>Obsdacle Run</h3>
+        <p>
+          An obstacle run is a race with physical challenges like climbing,
+          crawling, and jumping, testing strength, endurance, agility, and
+          mental toughness.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Blind Fold</h3>
+        <p>
+          A blindfold activity involves covering the eyes to block vision,
+          enhancing trust, focus, and sensory awareness in games, training, or
+          team-building exercises.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Ring and Ball</h3>
+        <p>Show your programming skills under pressure and time limits.</p>
+      </div>
+      <div class="game-card">
+        <h3>Everest</h3>
+        <p>Unleash your creativity and paint your masterpiece.</p>
+      </div>
+      <div class="game-card">
+        <h3>Rope and lava game</h3>
+        <p>
+          Cross the net without touching traps, then complete the lava game
+          together to win.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Lime Juice Challenge</h3>
+        <p>
+          Find the token, mix ingredients individually, drink lime drink, then
+          eat biscuits to win.
+        </p>
+      </div>
+      <div class="game-card">
+        <h3>Bubbly pass</h3>
+        <p>pass cup using balloon without touching it directly.</p>
+      </div>
+      <div class="game-card">
+        <h3>Path to victory</h3>
+        <p>
+          Team relays test strength, speed, teamwork, coordination, and
+          communication skills.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Left Column: Contact Info -->
+        <div class="footer-col contact-info">
+          <h3>Contact Info</h3>
+          <h4>Institute of Technology</h4>
+          <p>University of Moratuwa</p>
+          <p>Diyagama, Homagama</p>
+          <p>Sri Lanka</p>
+
+          <br />
+          <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Middle Column: Quick Links -->
+        <div class="footer-col quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">University Grants Commission</a></li>
+            <li><a href="#">University of Moratuwa</a></li>
+            <li><a href="#">NDT Alumni</a></li>
+            <li><a href="#">IESL</a></li>
+            <li><a href="#">Login to Web Mail</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Map -->
+        <div class="footer-col map-container">
+          <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+            <script>
+              (function () {
+                var setting = {
+                  query:
+                    "Institute of Technology, University of Moratuwa, Diyagama Lane, Homagama, Sri Lanka",
+                  width: 800,
+                  height: 600,
+                  satellite: false,
+                  zoom: 12,
+                  placeId: "ChIJ5_POShpO4joR_HRiIISc77I",
+                  cid: "0xb2ef9c84206274fc",
+                  coords: [6.8080276, 79.99302639999999],
+                  cityUrl: "/sri-lanka/colombo-19459",
+                  cityAnchorText: "Map of Colombo, Colombo District, Sri Lanka",
+                  lang: "us",
+                  queryString:
+                    "Institute of Technology, University of Moratuwa, Diyagama Lane, Homagama, Sri Lanka",
+                  centerCoord: [6.8080276, 79.99302639999999],
+                  id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+                  embed_id: "1303323",
+                };
+                var d = document;
+                var s = d.createElement("script");
+                s.src =
+                  "https://1map.com/js/script-for-user.js?embed_id=1303323";
+                s.async = true;
+                s.onload = function (e) {
+                  window.OneMap.initMap(setting);
+                };
+                var to = d.getElementsByTagName("script")[0];
+                to.parentNode.insertBefore(s, to);
+              })();
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 ITUM EMPREZA. All Rights Reserved.</p>
+        <div
+          class="scroll-up"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        >
+          &#8679;
+        </div>
+      </div>
+    </footer>
+    <script src="gamescript.js"></script>
+  </body>
+</html>
