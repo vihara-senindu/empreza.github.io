@@ -49,9 +49,9 @@ DESKTOP BASE STYLES
   width: 150px;
 }
 
-/* Center navigation links */
+/* Center navigation links - Visible on Desktop */
 .nav-links {
-  display: flex;
+  display: flex; /* <-- DISPLAY FLEX FOR DESKTOP */
   gap: 30px;
   list-style: none;
   position: absolute;
@@ -83,7 +83,7 @@ DESKTOP BASE STYLES
 
 /* New: Hamburger Icon (Hidden on Desktop) */
 .menu-toggle {
-  display: none; 
+  display: none; /* Hidden by default on Desktop */
   font-size: 30px;
   color: #fff;
   cursor: pointer;
@@ -588,8 +588,9 @@ RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
 
 /* 1. Tablet and Smaller Desktop (Max Width 992px) */
 @media (max-width: 992px) {
-  /* Navigation */
+  /* Navigation Links - Switch to mobile layout and hide by default */
   .nav-links {
+    display: none; /* HIDE links on Tablet/Mobile by default */
     gap: 15px;
   }
   .nav-links li a {
@@ -598,6 +599,11 @@ RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
   .countdown {
     font-size: 24px;
     padding: 5px 8px;
+  }
+  
+  /* Menu Toggle - SHOW the hamburger icon on Tablet/Mobile */
+  .menu-toggle {
+    display: block; 
   }
 
   /* Slideshow */
@@ -631,9 +637,11 @@ RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
   }
 }
 
+/* 2. Mobile (Max Width 768px) */
 @media (max-width: 768px) {
+  /* Menu Toggle - Ensure positioning and visibility is maintained */
   .menu-toggle {
-    display: block; 
+    display: block; /* Ensures visibility, overriding default desktop 'none' */
     position: absolute;
     right: 20px;
     top: 50%;
@@ -656,7 +664,7 @@ RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 998;
-    display: none;
+    /* Links remain display: none until the active class is added by JS */
   }
 
   .nav-links.active {
@@ -770,5 +778,42 @@ RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
   /* Footer Padding Adjustment */
   .main-footer {
     padding: 40px 10px 15px;
+  }
+}
+
+/* ===================================================
+RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
+=================================================== */
+
+/* ... existing CSS exactly as you uploaded ... */
+
+/* 3. Small Mobile (Max Width 500px) */
+@media (max-width: 500px) {
+  .logo img {
+    width: 120px;
+  }
+  .mySlides img {
+    height: 250px;
+  }
+  .about-container h1 {
+    font-size: 28px;
+  }
+  .about-container p {
+    font-size: 15px;
+  }
+  .responsive {
+    flex: 1 1 100%;
+  }
+  .main-footer {
+    padding: 40px 10px 15px;
+  }
+}
+
+/* ===================================================
+FIX: Hide hamburger on laptop/desktop screens
+=================================================== */
+@media (min-width: 993px) {
+  .menu-toggle {
+    display: none !important;
   }
 }
