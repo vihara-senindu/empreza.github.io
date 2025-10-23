@@ -18,6 +18,13 @@ a {
   text-decoration: none;
 }
 
+/*
+===================================================
+DESKTOP BASE STYLES
+(Applied by default, maintains desktop design)
+===================================================
+*/
+
 /* ===== HEADER & NAV (DESKTOP) ===== */
 .header {
   background: #cf061e;
@@ -50,14 +57,14 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  transition: all 0.3s ease; /* Added for smoother mobile transition */
+  transition: all 0.3s ease;
 }
 
 .nav-links li a {
   color: #fff;
   font-weight: bold;
   font-size: 18px;
-  padding: 10px 0; /* Add padding for clickable area */
+  padding: 10px 0;
   display: block;
 }
 
@@ -76,14 +83,14 @@ a {
 
 /* New: Hamburger Icon (Hidden on Desktop) */
 .menu-toggle {
-  display: none;
+  display: none; 
   font-size: 30px;
   color: #fff;
   cursor: pointer;
   z-index: 1000;
 }
 
-/* ===== POPUP MODAL STYLING (DESKTOP) ===== */
+/* ===== POPUP MODAL STYLING ===== */
 .modal {
   display: none;
   position: fixed;
@@ -128,10 +135,10 @@ a {
   color: #ffc107;
 }
 
-/* ===== SLIDESHOW (DESKTOP) ===== */
+/* ===== SLIDESHOW ===== */
 .slideshow-container {
   width: 90%;
-  margin: 20px auto; /* Added margin */
+  margin: 20px auto;
   position: relative;
 }
 .mySlides {
@@ -155,7 +162,7 @@ a {
   font-size: 18px;
   border-radius: 3px;
   user-select: none;
-  transform: translateY(-50%); /* Center vertically */
+  transform: translateY(-50%);
   transition: 0.3s;
 }
 .prev {
@@ -216,7 +223,7 @@ a {
   background-color: rgb(71, 13, 6);
 }
 
-/* ===== ABOUT SECTION (DESKTOP) ===== */
+/* ===== ABOUT SECTION ===== */
 .sectionabout {
   background: linear-gradient(
     135deg,
@@ -269,7 +276,7 @@ a {
   color: #fff;
 }
 
-/* ===== HOT EVENTS & NEWS (DESKTOP) ===== */
+/* ===== HOT EVENTS & NEWS ===== */
 .newss {
   display: flex;
   flex-wrap: wrap;
@@ -373,7 +380,7 @@ a {
   line-height: 1.6;
 }
 
-/* ===== GALLERY (DESKTOP) ===== */
+/* ===== GALLERY ===== */
 .gallery {
   background: rgb(52, 52, 14);
   padding: 3em 2em;
@@ -392,11 +399,11 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: center; /* Changed to center for better distribution on smaller screens */
+  justify-content: center;
 }
 .responsive {
   flex: 1 1 calc(25% - 12px);
-  min-width: 200px; /* Added min-width */
+  min-width: 200px;
   overflow: hidden;
   border-radius: 8px;
   position: relative;
@@ -420,7 +427,7 @@ a {
 .responsive:nth-child(1) img {
   animation-delay: 0.1s;
 }
-/* ... rest of your stagger animations ... */
+/* ... rest of stagger animations ... */
 
 /* ===== FOOTER (DESKTOP) ===== */
 .main-footer {
@@ -547,7 +554,7 @@ a {
   box-shadow: 0 0 10px #ffc107;
 }
 
-/* ===== ANIMATIONS (DESKTOP) ===== */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -575,7 +582,7 @@ a {
 
 /*
 ===================================================
-RESPONSIVENESS (MOBILE & TABLET)
+RESPONSIVENESS (MOBILE & TABLET BREAKPOINTS)
 ===================================================
 */
 
@@ -583,7 +590,7 @@ RESPONSIVENESS (MOBILE & TABLET)
 @media (max-width: 992px) {
   /* Navigation */
   .nav-links {
-    gap: 15px; /* Reduce spacing */
+    gap: 15px;
   }
   .nav-links li a {
     font-size: 16px;
@@ -598,7 +605,7 @@ RESPONSIVENESS (MOBILE & TABLET)
     height: 400px;
   }
   .text1 {
-    width: 50%; /* Make text overlay wider */
+    width: 50%;
   }
   .text1 h3 {
     font-size: 24px;
@@ -606,85 +613,65 @@ RESPONSIVENESS (MOBILE & TABLET)
   .text1 p {
     font-size: 16px;
   }
-  
+
   /* About Section */
   .sectionabout {
     margin: 20px 10px;
+    padding: 40px 15px;
   }
-  
+
   /* Gallery */
   .responsive {
-    flex: 1 1 calc(33.333% - 12px); /* 3 images per row */
+    flex: 1 1 calc(33.333% - 12px);
   }
-  
+
   /* Footer */
   .footer-col {
     min-width: 200px;
   }
 }
 
-/* 2. Mobile and Smaller Tablet (Max Width 768px) */
 @media (max-width: 768px) {
-  /* Navigation (Mobile-specific changes) */
   .menu-toggle {
-    display: block; /* Show the hamburger icon */
-    position: absolute; /* Position it relative to navbar for flexibility */
+    display: block; 
+    position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  /* Hide countdown on small screens to save space */
   .countdown {
     display: none;
   }
 
   .nav-links {
-    /* Menu hidden by default (mobile view) */
     position: absolute;
-    top: 100px; /* Below the header */
+    top: 100px;
     left: 0;
-    transform: translateX(0); /* Remove center transform */
+    transform: translateX(0);
     flex-direction: column;
     width: 100%;
-    background: rgba(89, 4, 1, 0.95); /* Semi-transparent background for overlay */
+    background: rgba(89, 4, 1, 0.95);
     height: auto;
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 998;
-    
-    /* Initially hide the menu */
     display: none;
   }
 
   .nav-links.active {
-    display: flex; /* Show menu when active class is added by JavaScript */
+    display: flex;
   }
-
-  .nav-links li {
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
-
-  .nav-links li a {
-    font-size: 18px;
-    padding: 12px 0;
-  }
-
-  /* Slideshow */
+  /* --- SLIDESHOW --- */
   .mySlides img {
     height: 300px;
   }
   .text1 {
-    width: 100%; /* Full width text overlay */
+    width: 100%;
     height: auto;
     bottom: 0;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.6); /* Slightly less opaque */
+    background: rgba(0, 0, 0, 0.6);
   }
   .text1 h3 {
     margin: 5px 0;
@@ -700,9 +687,9 @@ RESPONSIVENESS (MOBILE & TABLET)
     font-size: 16px;
   }
 
-  /* Hot Events & News */
+  /* --- CONTENT SECTIONS --- */
   .newss {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
     gap: 15px;
     margin: 10px;
     padding: 20px;
@@ -714,7 +701,7 @@ RESPONSIVENESS (MOBILE & TABLET)
     min-width: unset;
   }
   .event-container {
-    flex-direction: column; /* Stack image and text vertically */
+    flex-direction: column;
     padding: 10px;
     gap: 15px;
   }
@@ -725,24 +712,30 @@ RESPONSIVENESS (MOBILE & TABLET)
 
   /* Gallery */
   .responsive {
-    flex: 1 1 calc(50% - 12px); /* 2 images per row */
+    flex: 1 1 calc(50% - 12px);
   }
 
-  /* Footer */
+  /* --- FOOTER FIXES (MOBILE) --- */
   .footer-container {
     flex-direction: column;
     gap: 30px;
+    padding: 0 20px;
+  }
+  .map-container { /* HIDES THE MAP ON MOBILE */
+    display: none;
   }
   .footer-col {
-    text-align: center;
     min-width: 100%;
+    text-align: center; /* Center column headers and contact info */
   }
   .social-icons {
     margin-top: 15px;
+    display: block;
   }
   .quick-links ul {
-    text-align: center;
-    padding-left: 0;
+    /* Critical Fix: Centers the block element (UL) itself for a cleaner look */
+    display: inline-block;
+    text-align: left; /* Keeps the list items left-aligned within the centered UL block */
   }
   .footer-bottom {
     flex-direction: column;
@@ -755,7 +748,7 @@ RESPONSIVENESS (MOBILE & TABLET)
   .logo img {
     width: 120px;
   }
-  
+
   /* Slideshow */
   .mySlides img {
     height: 250px;
@@ -765,13 +758,17 @@ RESPONSIVENESS (MOBILE & TABLET)
   .about-container h1 {
     font-size: 28px;
   }
-
   .about-container p {
     font-size: 15px;
   }
 
   /* Gallery */
   .responsive {
-    flex: 1 1 100%; /* 1 image per row (full width) */
+    flex: 1 1 100%;
+  }
+
+  /* Footer Padding Adjustment */
+  .main-footer {
+    padding: 40px 10px 15px;
   }
 }
