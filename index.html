@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Empreza</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar" id="mainNavbar">
+        <div class="logo">
+          <img src="logo.png" alt="Event Logo" />
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="./Games.html">Games</a></li>
+          <li><a href="./scores.html">Scores</a></li>
+          <li><a href="./index.html">Gallery</a></li>
+          <li><a href="history.html">History</a></li>
+        </ul>
+
+        <i class="fa-solid fa-bars menu-toggle" id="menuToggle"></i>
+
+        <div class="countdown" id="countdown">Loading...</div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div id="popupModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="./popup.jpg" alt="Popup Image" />
+        </div>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="img1.jpg" alt="Slide 1" />
+          <div class="text1">
+            <h3>EMPREZA 2025</h3>
+            <p class="slde-text">
+              <br /><br />
+              The <b>Empreza Adventure Leadership Program </b> is a dynamic
+              university initiative designed to develop leadership, teamwork,
+              and problem-solving skills through outdoor challenges and
+              adventure-based activities, inspiring students to build
+              confidence, resilience, and effective communication in real-world
+              situations.
+            </p>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="img2.jpg" alt="Slide 2" />
+          <div class="text1">
+            <h3>EMPREZA 2025</h3>
+            <p class="slde-text">
+              <br /><br />
+              The *Emprezza Adventure Leadership Program* is a unique university
+              initiative that combines adventure and learning to nurture future
+              leaders. Through outdoor challenges, team tasks, and experiential
+              activities, students develop essential leadership qualities,
+              communication skills, and self-confidence while fostering
+              teamwork, resilience, and a positive mindset for personal and
+              professional&nbsp;growth.
+            </p>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="img3.jpg" alt="Slide 3" />
+          <div class="text1">
+            <h3>EMPREZA 2025</h3>
+            <p>
+              Leaders united to build trust, test teamwork, and unleash their
+              potential through interactive challenges.
+            </p>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="img4.jpg" alt="Slide 4" />
+          <div class="text1">
+            <h3>EMPREZA 2025</h3>
+            <p>
+              Empowering participants to lead, adapt, and grow through games
+              that turned ideas into action.
+            </p>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="img5.jpg" alt="Slide 5" />
+          <div class="text1">
+            <h3>EMPREZA 2025</h3>
+            <p>
+              When leadership became more than a concept &mdash; it became a game of
+              strategy, communication, and vision.
+            </p>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <section id="about" class="sectionabout fade-in">
+        <div class="about-container">
+          <h1 class="about-text-head">About Empreza</h1>
+          <p class="about-text">
+            Empreza is a high-energy leadership sport event designed to ignite
+            the leader within you! Blending the spirit of competition with the
+            essence of leadership, Empreza offers a unique platform where
+            participants test their determination, decision-making, teamwork,
+            and strategic thinking &mdash; all through thrilling and fun-filled games.
+          </p>
+          <p class="about-text">
+            This isn't your typical leadership seminar. At Empreza, we believe
+            leadership is best learned on the field &mdash; where every challenge
+            demands action, every moment counts, and every teammate matters.
+            Whether you're racing against the clock, solving complex team
+            puzzles, or leading your group to victory, each activity is crafted
+            to build resilience, sharpen focus, and unlock your leadership
+            potential.
+          </p>
+        </div>
+      </section>
+
+      <section class="newss fade-in">
+        <div class="hotbox slide-left">
+          <h3>Hot Event</h3>
+          <div class="events">
+            <img src="empreza.jpg" alt="Event" class="ev1" />
+            <div class="event-text">
+              <h4>Event header</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing since the
+                1500s.
+              </p>
+            </div>
+          </div>
+          <div class="events">
+            <img src="empreza.jpg" alt="Event" class="ev1" />
+            <div class="event-text">
+              <h4>Event header</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing since the
+                1500s.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="newssc slide-right">
+          <h3>News & Announcing</h3>
+          <div class="events">
+            <div class="event-container">
+              <img
+                src="your-image.jpg"
+                alt="Empreza Event"
+                class="event-image"
+              />
+              <div class="event-text">
+                <h4>ITUM LEADERSHIP PROGRAM</h4>
+                <p>
+                  Get ready to unleash the leader within! The students of
+                  Nautical, Textile, Marine, Civil, Chemical, and Polymer at
+                  ITUM present EMPREZA 2025!
+                </p>
+                <p>
+                  Mark your calendar for Friday, the 24th of October 2025, from
+                  8.15 to 5.15 at the ITUM premises.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="events">
+            <div class="event-container">
+              <img
+                src="your-image.jpg"
+                alt="Empreza Event"
+                class="event-image"
+              />
+              <div class="event-text">
+                <h4>ITUM LEADERSHIP PROGRAM</h4>
+                <p>
+                  Get ready to unleash the leader within! The students of
+                  Nautical, Textile, Marine, Civil, Chemical, Chemical, and Polymer at
+                  ITUM present EMPREZA 2025!
+                </p>
+                <p>
+                  Mark your calendar for Friday, the 24th of October 2025, from
+                  8.15 to 5.15 at the ITUM premises.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery fade-in">
+        <h1 class="gallery-text">Gallery</h1>
+        <div class="gallery-container">
+          <div class="responsive">
+            <img src="Newimg/5m.jpg" alt="Cinque Terre" />
+          </div>
+          <div class="responsive"><img src="Newimg/1m.jpg" alt="Forest" /></div>
+          <div class="responsive">
+            <img src="Newimg/2m.jpg" alt="Northern Lights" />
+          </div>
+          <div class="responsive">
+            <img src="Newimg/4m.jpg" alt="Mountains" />
+          </div>
+          <div class="responsive">
+            <img src="Newimg/5m.jpg" alt="Cinque Terre" />
+          </div>
+          <div class="responsive"><img src="Newimg/1m.jpg" alt="Forest" /></div>
+          <div class="responsive">
+            <img src="Newimg/2m.jpg" alt="Northern Lights" />
+          </div>
+          <div class="responsive">
+            <img src="Newimg/4m.jpg" alt="Mountains" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col contact-info">
+          <h3>Contact Info</h3>
+          <h4>Institute of Technology</h4>
+          <p>University of Moratuwa</p>
+          <p>Diyagama, Homagama</p>
+          <p>Sri Lanka</p>
+
+          <br />
+          <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">University Grants Commission</a></li>
+            <li><a href="#">University of Moratuwa</a></li>
+            <li><a href="#">NDT Alumni</a></li>
+            <li><a href="#">IESL</a></li>
+            <li><a href="#">Login to Web Mail</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col map-container">
+          <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+            <script>
+              (function () {
+                var setting = {
+                  query:
+                    "Institute of Technology, University of Moratuwa, Diyagama Lane, Homagama, Sri Lanka",
+                  width: 800,
+                  height: 600,
+                  satellite: false,
+                  zoom: 12,
+                  placeId: "ChIJ5_POShpO4joR_HRiIISc77I",
+                  cid: "0xb2ef9c84206274fc",
+                  coords: [6.8080276, 79.99302639999999],
+                  cityUrl: "/sri-lanka/colombo-19459",
+                  cityAnchorText: "Map of Colombo, Colombo District, Sri Lanka",
+                  lang: "us",
+                  queryString:
+                    "Institute of Technology, University of Moratuwa, Diyagama Lane, Homagama, Sri Lanka",
+                  centerCoord: [6.8080276, 79.99302639999999],
+                  id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+                  embed_id: "1303323",
+                };
+                var d = document;
+                var s = d.createElement("script");
+                s.src =
+                  "https://1map.com/js/script-for-user.js?embed_id=1303323";
+                s.async = true;
+                s.onload = function (e) {
+                  window.OneMap.initMap(setting);
+                };
+                var to = d.getElementsByTagName("script")[0];
+                to.parentNode.insertBefore(s, to);
+              })();
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 ITUM EMPREZA. All Rights Reserved.</p>
+        <div
+          class="scroll-up"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        >
+          &#8679;
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
