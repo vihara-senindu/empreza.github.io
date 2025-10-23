@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History - Empreza</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f8f8f8;
+        color: #333;
+      }
+
+      header {
+        background: #cf061e;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      .history-container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .history-card {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .history-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .history-card img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .history-text {
+        flex: 1;
+      }
+
+      .history-text h2 {
+        color: #cf061e;
+        margin-top: 0;
+        font-size: 24px;
+      }
+
+      .history-text p {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .history-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .history-card img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="Event Logo" />
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="./Games.html">Games</a></li>
+          <li><a href="./scores.html">Scores</a></li>
+          <li><a href="./index.html">Gallery</a></li>
+          <li><a href="history.html">History</a></li>
+        </ul>
+
+        <div class="countdown" id="countdown">Loading...</div>
+      </nav>
+    </header>
+
+    <div class="history-container">
+      <div class="history-card">
+        <img src="history/empreza2023.jpg" alt="Empreza 2023" />
+        <div class="history-text">
+          <h2>Empreza 2023</h2>
+          <p>
+            Empreza 2023 marked the rebirth of leadership and teamwork after the
+            pandemic years. The event brought together hundreds of students
+            across disciplines to collaborate in creative challenges, inspiring
+            the next generation of innovators. With interactive games,
+            workshops, and leadership tasks, it set the tone for all future
+            events.
+          </p>
+        </div>
+      </div>
+
+      <div class="history-card">
+        <img src="history/empreza2024.jpg" alt="Empreza 2024" />
+        <div class="history-text">
+          <h2>Empreza 2024</h2>
+          <p>
+            Empreza 2024 elevated the experience to new heights with the theme
+            "Empower the Vision". It introduced digital scoring, modern event
+            branding, and community-driven competitions. Teams demonstrated
+            creativity, discipline, and unity in an event filled with innovation
+            and excitement.
+          </p>
+        </div>
+      </div>
+
+      <div class="history-card">
+        <img src="history/empreza2025.jpg" alt="Empreza 2025" />
+        <div class="history-text">
+          <h2>Empreza 2025</h2>
+          <p>
+            Empreza 2025 celebrates leadership excellence and collaborative
+            spirit like never before. Featuring over 20 games, cultural
+            performances, and inspiring stories, this year’s event showcases the
+            evolution of teamwork and passion that defines the Empreza legacy.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./gamescript.js"></script>
+  </body>
+</html>

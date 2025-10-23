@@ -1,17 +1,11 @@
-function displaymenu() {
-  var x = document.getElementById("logo");
-  if (x.style.display === "none" || x.style.display === "") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
 let slideIndex = 1;
 let autoSlideInterval = null;
 
-showSlides(slideIndex);
-startAutoSlide();
+// Initialization calls
+// Note: showSlides(1) is called inside the DOMContentLoaded listener for safety
+// showSlides(slideIndex);
+// startAutoSlide();
+
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
@@ -44,6 +38,10 @@ function showSlides(n) {
 }
 
 function startAutoSlide() {
+  // Clear any existing interval before starting a new one
+  if (autoSlideInterval) {
+    clearInterval(autoSlideInterval);
+  }
   autoSlideInterval = setInterval(() => {
     slideIndex++;
     showSlides(slideIndex);
@@ -55,17 +53,23 @@ function restartAutoSlide() {
   startAutoSlide();
 }
 
+// ===================================
+// Countdown Logic
+// ===================================
+
 function getNextFriday() {
   const now = new Date();
   const day = now.getDay(); // 0=Sunday, 5=Friday
   const nextFriday = new Date(now);
-
-  // Set target to this Friday 8:15 AM
-  const daysUntilFriday = (5 - day + 7) % 7 || 7; // if today is Friday, go to next Friday
-  nextFriday.setDate(now.getDate() + daysUntilFriday);
-  nextFriday.setHours(8, 15, 0, 0);
-
-  return nextFriday;
+  
+  // Event date specified in HTML is Oct 24, 2025. 
+  // For a fixed date event, it's better to use that date rather than the "next Friday" logic.
+  // Using the hardcoded date from your HTML comments for accuracy (Friday, Oct 24, 2025 at 8:15 AM)
+  
+  // NOTE: Assuming 2025 is the target year from your HTML
+  const targetDate = new Date("October 24, 2025 08:15:00");
+  
+  return targetDate;
 }
 
 function updateCountdown() {
@@ -92,23 +96,57 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// POPUP IMAGE ON PAGE LOAD
-window.addEventListener("load", () => {
+
+// ===================================
+// DOMContentLoaded Listener (for all initialization)
+// ===================================
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Slideshow initialization
+  showSlides(slideIndex);
+  startAutoSlide();
+  
+  // 1. POPUP IMAGE ON PAGE LOAD
   const modal = document.getElementById("popupModal");
-  const closeBtn = modal.querySelector(".close");
-
-  // Show modal
-  modal.style.display = "block";
-
-  // Close when clicking 'X'
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Close when clicking outside modal content
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
+  if (modal) {
+    const closeBtn = modal.querySelector(".close");
+    
+    // Show modal
+    modal.style.display = "block";
+    
+    // Close when clicking 'X'
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
     }
-  });
+
+    // Close when clicking outside modal content
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+
+  // 2. MOBILE MENU TOGGLE LOGIC (Replaces the broken displaymenu function)
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+          // Toggles the 'active' class which controls mobile menu visibility via CSS
+          navLinks.classList.toggle('active'); 
+      });
+
+      // Close menu when a link is clicked (improves mobile UX)
+      navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+              // Check screen width to ensure we only close on mobile/tablet view
+              if (window.innerWidth <= 768) { 
+                  navLinks.classList.remove('active');
+              }
+          });
+      });
+  }
 });
