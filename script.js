@@ -1,12 +1,6 @@
 let slideIndex = 1;
 let autoSlideInterval = null;
 
-// Initialization calls
-// Note: showSlides(1) is called inside the DOMContentLoaded listener for safety
-// showSlides(slideIndex);
-// startAutoSlide();
-
-
 function plusSlides(n) {
   showSlides((slideIndex += n));
   restartAutoSlide();
@@ -78,7 +72,7 @@ function updateCountdown() {
   const diff = target - now;
 
   if (diff <= 0) {
-    document.getElementById("countdown").innerHTML = "Event Started!";
+    document.getElementById("countdown").innerHTML = "Happening Now❗";
     return;
   }
 
